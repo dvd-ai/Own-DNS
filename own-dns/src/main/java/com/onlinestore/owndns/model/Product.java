@@ -12,6 +12,7 @@ import java.util.Set;
 @Data
 @Setter
 @Getter
+@Table(name = "product")
 public class Product {
     @Id
     private Long id;
