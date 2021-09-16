@@ -1,6 +1,6 @@
 package com.onlinestore.owndns.model;
 
-import com.onlinestore.owndns.model.enum_.data.ORDER_STATUS;
+import com.onlinestore.owndns.model.enum_.data.OrderStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,5 +30,5 @@ public class Order {
     private int amount;
 
     @Enumerated(EnumType.STRING)
-    private ORDER_STATUS order_status;
+    private OrderStatus order_status;
 }
