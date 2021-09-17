@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/account")
-public class AccountContoller {
+public class AccountController {
 
     @GetMapping("/id{Userid}")
     public String account(@PathVariable(name = "Userid") Long id, Model model){
