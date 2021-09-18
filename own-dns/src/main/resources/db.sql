@@ -20,7 +20,7 @@ drop table if exists product cascade;
 create table product(
     product_id serial primary key,
     article int,
-    price decimal(4,2),
+    price int,
     available boolean default true,
     description varchar(100),
     seller_id int,
