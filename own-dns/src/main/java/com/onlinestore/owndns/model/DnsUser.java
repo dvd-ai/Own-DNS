@@ -20,7 +20,7 @@ public class DnsUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull(message = "Name must between 4 to 20 characters")
+    @NotNull(message = "Name must be between 4 and 20 characters")
     @Size(min = 4,max = 20)
     private String name;
     @OneToMany(mappedBy = "dnsUser")
