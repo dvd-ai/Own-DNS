@@ -17,8 +17,7 @@ public class MainController {
 
 
     @GetMapping
-    public @ResponseBody
-    ResponseEntity<?> main(Model model){
+    public ResponseEntity<?> main(Model model){
         return  null;
     }
 }

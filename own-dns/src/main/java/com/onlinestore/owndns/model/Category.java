@@ -19,6 +19,7 @@ public class Category {
     private Long id;
     @NotBlank
     private String name;
+    private String image;
     @OneToMany(mappedBy = "category")
     private Set<Product> products;
 }

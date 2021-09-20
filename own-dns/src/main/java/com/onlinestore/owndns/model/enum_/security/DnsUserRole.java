@@ -1,9 +1,11 @@
 package com.onlinestore.owndns.model.enum_.security;
 
 import com.google.common.collect.Sets;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.onlinestore.owndns.model.enum_.security.DnsUserPermission.*;
 
@@ -22,4 +24,15 @@ public enum DnsUserRole {
     DnsUserRole(HashSet<DnsUserPermission> permissions) {
         this.permissions = permissions;
     }
+
+    public Set<DnsUserPermission> getPermissions() {
+        return permissions;
+    }
+
+    public Set<SimpleGrantedAuthority> getAuthorities(){
+        return getPermissions().stream()
+                .map(x-> new SimpleGrantedAuthority(x.getPermission()))
+                .collect(Collectors.toSet());
+
+            }
 }
