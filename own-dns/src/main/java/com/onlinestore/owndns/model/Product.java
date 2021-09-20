@@ -26,7 +26,7 @@ public class Product {
     private Category category;
     @NotBlank
     private Double price;
-    private boolean available;
+    private int amount;
     @NotBlank
     @Size(min = 5, max = 100)
     private String description;
