@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.online-store</groupId>
 	<artifactId>own-dns</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>own-dns</name>
 	<description>own dns store</description>
 	<properties>
@@ -58,10 +58,18 @@
         </dependency>
 
 		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
     </dependencies>
 
 
