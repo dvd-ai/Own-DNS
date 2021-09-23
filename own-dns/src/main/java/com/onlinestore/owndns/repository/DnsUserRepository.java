@@ -6,10 +6,18 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-/**v1
+/**v1.1
+ * + exists by Username, email,
+ * + findDnsUserByUsername
  * */
 @Repository
 public interface DnsUserRepository extends JpaRepository<DnsUser, Long> {
 
     Optional<DnsUser> findDnsUserById(Long id);
+
+    Optional<DnsUser> findDnsUserByUsername(String username);
+
+    Boolean existsDnsUserByUsername(String username);
+
+    Boolean existsDnsUserByEmail(String email);
 }
