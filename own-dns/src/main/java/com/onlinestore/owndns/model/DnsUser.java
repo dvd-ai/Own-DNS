@@ -46,9 +46,10 @@ public class DnsUser {
     public DnsUser() {
     }
 
-    public DnsUser(String username, String email, String password) {
+    public DnsUser(String username, String email, String name, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.name = name;
     }
 }
