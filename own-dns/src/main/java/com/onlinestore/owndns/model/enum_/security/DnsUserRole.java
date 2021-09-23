@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 
 import static com.onlinestore.owndns.model.enum_.security.DnsUserPermission.*;
 
-/**v1
+/**v1.1
+ * + role added to SimpleGrantedAuthority in add. to permissions
  * */
 public enum DnsUserRole {
     ADMIN(Sets.newHashSet(CUSTOMER_READ, CUSTOMER_WRITE,
@@ -31,9 +32,11 @@ public enum DnsUserRole {
     }
 
     public Set<GrantedAuthority> getAuthorities(){
-        return getPermissions().stream()
+        Set<GrantedAuthority> grantedAuthorities = getPermissions().stream()
                 .map(x-> new SimpleGrantedAuthority(x.getPermission()))
                 .collect(Collectors.toSet());
+        grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_" + this.name()));
+        return grantedAuthorities;
+    }
 
-            }
 }

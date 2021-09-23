@@ -2,6 +2,8 @@ package com.onlinestore.owndns.model.response;
 
 import java.util.List;
 
+/**v1*/
+
 public class JwtResponse {
     private String token;
     private String type = "Bearer";

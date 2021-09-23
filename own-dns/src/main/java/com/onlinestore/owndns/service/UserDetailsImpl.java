@@ -9,6 +9,9 @@ import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * v1*/
+
 public class UserDetailsImpl implements UserDetails {
     private static final long serialVersionUID = 1L;
 

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 /**v1.1
- * + exists by Username, email
+ * + exists by Username, email,
+ * + findDnsUserByUsername
  * */
 @Repository
 public interface DnsUserRepository extends JpaRepository<DnsUser, Long> {

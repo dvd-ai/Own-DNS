@@ -2,6 +2,8 @@ package com.onlinestore.owndns.model.request;
 
 import javax.validation.constraints.NotBlank;
 
+/**v1*/
+
 public class LoginRequest {
     @NotBlank
     private String username;

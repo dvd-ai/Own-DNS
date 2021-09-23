@@ -1,5 +1,7 @@
 package com.onlinestore.owndns.model.response;
 
+/**v1*/
+
 public class MessageResponse {
     private String message;
 
