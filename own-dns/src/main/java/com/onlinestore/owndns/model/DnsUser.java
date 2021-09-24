@@ -6,12 +6,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Set;
 
-/**v1.2
- * + upd constructors*
+/**v1.3
+ * + name is nullable,
+ * + upd constr
  */
 
 @Entity
@@ -35,9 +35,10 @@ public class DnsUser {
     @Size(max = 100)
     private String password;
 
-    @NotNull(message = "Name must be between 4 and 20 characters")
-    @Size(min = 4, max = 20)
+//    @NotNull(message = "Name must be between 4 and 20 characters")
+//    @Size(min = 4, max = 20)
     private String name;
+
     @OneToMany(mappedBy = "dnsUser")
     private Set<Order> orders;
 
@@ -45,6 +46,12 @@ public class DnsUser {
     private DnsUserRole dnsUserRole;
 
     public DnsUser() {
+    }
+
+    public DnsUser(String username, String email, String password) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     public DnsUser(String username, String email, String name, String password) {

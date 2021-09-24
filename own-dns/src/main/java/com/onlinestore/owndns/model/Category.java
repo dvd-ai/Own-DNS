@@ -1,12 +1,16 @@
 package com.onlinestore.owndns.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Set;
+
+/**v1.1*
+ * + Json ignore
+ */
 
 @Entity
 @Getter
@@ -21,5 +25,6 @@ public class Category {
     private String name;
     private String image;
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private Set<Product> products;
 }

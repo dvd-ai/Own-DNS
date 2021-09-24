@@ -80,7 +80,6 @@ public class AuthController {
         // Create new user's account
         DnsUser dnsUser = new DnsUser(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
-                signUpRequest.getName(),
                 encoder.encode(signUpRequest.getPassword()));
 
         String role = signUpRequest.getRole();
