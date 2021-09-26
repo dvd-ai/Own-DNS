@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.onlinestore.owndns.config.AppConfig",
+      "sourceType": "com.onlinestore.owndns.config.AppConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.url",
+      "type": "java.lang.String",
+      "sourceType": "com.onlinestore.owndns.config.AppConfig"
+    }
+  ],
+  "hints": []
+}
